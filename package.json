@@ -1,0 +1,19 @@
+{
+  "name": "db-mapper",
+  "version": "0.0.2",
+  "description": "Map OR object into an API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LiShiSangZi/db-mapper.git"
+  },
+  "author": "gogocrow <jane19861227@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LiShiSangZi/db-mapper/issues"
+  },
+  "homepage": "https://github.com/LiShiSangZi/db-mapper#readme"
+}
