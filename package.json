@@ -1,6 +1,6 @@
 {
   "name": "db-mapper",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Map OR object into an API",
   "main": "index.js",
   "scripts": {
