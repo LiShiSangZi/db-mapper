@@ -1,6 +1,6 @@
 'use strict';
 
-function generateQueryObj(objVar) {
+function generateQueryObj(objVar, key) {
   const o = {
     "where": {}
   };
@@ -19,7 +19,7 @@ function generateAPI(endpoint, model, key, addtional, verify) {
       return yield model.findAll({});
     },
     "detail": function*(objVar) {
-      const o = generateQueryObj(objVar);
+      const o = generateQueryObj(objVar, key);
       const res = yield model.findAll(o);
       if (res.length < 1) {
         Promise.reject({
@@ -30,11 +30,11 @@ function generateAPI(endpoint, model, key, addtional, verify) {
       return res[0];
     },
     "update": function*(objVar) {
-      const o = generateQueryObj(objVar);
+      const o = generateQueryObj(objVar, key);
       return yield model.update(objVar.body, o);
     },
     "delete": function*(objVar) {
-      const o = generateQueryObj(objVar);
+      const o = generateQueryObj(objVar, key);
       return yield model.update({
         "status": "DELETE",
       }, o);
